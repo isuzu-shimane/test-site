@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head> <!-- サイトのタイトル -->
+  <meta charset="UTF-8">
+  <title>すたー★こねくと</title>
+  <meta name="description" content="嶋根いすずのホームページ「すたー★こねくと」">
+
+<style>
+.site-title {
+  color: #0000ff;
+}
+</style>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <div class="top-banner"> <!-- 装飾用トップバナーと更新日時 -->
+    <span class="last-updated">最終通信日：2026.01.15</span>
+  </div>
+
+
+<div class="container"> <!-- ここから横並びにさせたいブロック -->
+
+  <nav class="side-menu"> <!-- 左側ブロック（もしサイドメニューを作る場合） -->
+  </nav> <!-- ここまで左側ブロック -->
+
+<div class="main-content"> <!-- 中央ブロック -->
+  <header class="site-header"> <!-- トップメッセージ -->
+   <h1 class="site-title">すたー★こねくと</h1>
+   <p class="site-subtitle">～Welcome to my digital garden～</p>
+
+   <p class="top-message">ようこそ！<br>
+    ここは すたー★こねくと。<br>
+    ネットの宙に瞬くちいさな衛星です。</p>
+
+  <p class="top-message2">この衛星は
+  <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=shimacochan01&type=16&width=5">
+  回の信号を受け取りました。<br>
+  ありがとう★
+  </p>
+
+  <p class="top-message3">通信状態：<span id="status-text"></span>
+  </p>
+   <script> <!-- ランダムメッセージ -->
+  const now = new Date();
+  const hour = now.getHours();
+
+  let messages = [];
+
+  if (hour >= 4 && hour < 7) {
+    // 早朝
+    messages = [
+      "今日の観測を始めます",
+      "静かな軌道を周回中です",
+      "通信状態を確認中…"
+    ];
+  } else if (hour >= 7 && hour < 12) {
+    // 朝
+    messages = [
+      "通信待機中…",
+      "通信待機中…"
+    ];
+  } else if (hour >= 12 && hour < 15) {
+    // 昼間
+    messages = [
+      "平常です",
+      "安定しています",
+      "そろそろおやつの時間です"
+    ];
+  } else if (hour >= 15 && hour < 18) {
+    // 夕方
+    messages = [
+      "通信は維持されています",
+      "衛星は軌道を調節中です",
+      "観測は続いています"
+    ];
+  } else if (hour >= 18 && hour < 24) {
+    // 夜
+    messages = [
+      "良好です★",
+      "ぴぴるぴ～♪"
+    ];
+  } else {
+    // 深夜（0時〜4時）
+    messages = [
+      "回線は静かです",
+      "低出力で発信中…",
+      "衛星はまだ起きています"
+    ];
+  }
+
+  const message = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("status-text").textContent = message;
+   </script>
+  </header>
+
+   <nav class="top-nav"> <!-- トップナビ -->
+  <ul class="nav-links">
+    <li class="bracket">[</li>
+    <li><a href="">ごあんない</a></li>
+    <li class="separator">|</li>
+    <li><a href="">プロフィール</a></li>
+    <li class="separator">|</li>
+    <li><a href="">衛星からのお手紙</a></li>
+    <li class="bracket">]</li>
+  </ul>
+   </nav>
+
+
+
+
+
+<h2 class="main-nav-title">★メインメニュー★</h2>   
+  <nav class="main-nav"> <!-- メインメニュー -->
+    <div class="menu-block">
+    <ul>
+      <li><a href="goannnai.html">ごあんない</a></li>
+       <span class="menu-desc">ここは説明文ですここは説明文です</span>
+      <li><a href="koujityu.html">プロフィール</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="koujityu.html">衛星からのお手紙</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="koujityu.html">月刊嶋根</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="koujityu.html">ギャラリー</a></li>
+       <span class="menu-desc"></span>
+    </ul>
+    </div>
+
+    <div class="menu-block">
+    <ul>
+      <li><a href="https://x.com/isuzu_shimane" target="_blank">Twitter（X）</a></li>
+       <span class="menu-desc">ここは説明文ですここは説明文です</span>
+      <li><a href="https://www.youtube.com/@isuzu_shimane" target="_blank">YouTube</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="https://twitcasting.tv/isuzu_shimane/star" target="_blank">ふぁん★くらぶ</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="https://twitcasting.tv/isuzu_shimane" target="_blank">ツイキャス</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="https://note.com/isuzu_shimane" target="_blank">note</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="https://ameblo.jp/isuzu-shimane/" target="_blank">Amebaブログ</a></li>
+       <span class="menu-desc"></span>
+    </ul>
+    </div>
+
+    <div class="menu-block">
+    <ul>
+      <li><a href="https://www.instagram.com/isuzu_shimane/" target="_blank">Instagram</a></li>
+       <span class="menu-desc">ここは説明文ですここは説明文です</span>
+      <li><a href="https://www.tiktok.com/@isuzu_shimane" target="_blank">TikTok</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="https://shimacochan.blog.fc2.com/" target="_blank">旧ブログ（FC2）</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="https://marshmallow-qa.com/5buxdm781ffqkz6?t=5r34GS&utm_medium=url_text&utm_source=promotion" target="_blank">マシュマロ</a></li>
+       <span class="menu-desc"></span>
+      <li><a href="https://store.line.me/stickershop/product/28704411/ja" target="_blank">LINEスタンプ</a></li>
+       <span class="menu-desc"></span>
+    </ul>
+    </div>
+  </nav>
+
+</div> <!-- ここまで中央ブロック -->
+</div> <!-- ここまで横並びにさせたいブロック -->
+
+</main>
+  <section class="news">
+      <h3>お知らせ</h3>
+      <ul>
+        <li>現在お知らせはありません。</li>
+      </ul>
+  </section>
+
+  <section class="log">
+      <h3>通信記録</h3>
+      <ul>
+        <li>2026.01.15 衛星を打ち上げました！</li>
+        <li>2026.01.14 サイト名を「すたー★りんく」から「すたー★こねくと」へ変更しました。</li>
+        <li>2026.01.13 サイトを作り始めました。</li>
+      </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 すたー★こねくと</p>
+</footer>
+
+</body>
+</html>

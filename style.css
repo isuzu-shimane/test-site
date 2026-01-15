@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body {
+  font-family:
+    "Meiryo",
+    "Yu Gothic",
+    "Yu Gothic UI",
+    sans-serif;
+
+    /* 装飾用のトップバナー */
+.top-banner {
+  width: 100%;
+  height: 150px;               /* 高さ調整 */
+  background-color: #0000ff;
+  margin: 0;
+  padding: 0;
+  position: relative;         /* ここを基準地点 */
+}
+  .last-updated {
+    position: absolute;         /* 親要素を基準に自由に配置 */
+    top: 5px;                   /* 上から何pxの位置 */
+    right: 10px;                /* 右から何pxの位置 */
+    color: #ffffff;           
+    font-size: 15px;            /* 文字の大きさ */
+  }
+
+/* トップメッセージ全体のレイアウト */
+  .site-header {
+    text-align: center;    /* 中央寄せ */
+  }
+  .site-title {
+    font-size: 38px;      /* 文字の大きさ */
+    margin-bottom: -2px; /* 下の要素を上に引き寄せる */
+  }
+  .site-subtitle {
+    font-size: 17px;
+    color: #7b7b7b;      
+    margin-top: 0;         /* 上の余白をなくす */
+    padding-left: 100px;    /* 左側に余白を作って、全体を右にずらす */
+    margin-bottom: 30px;
+  }
+
+/* トップナビの配置 */
+.top-nav {
+  text-align: center;
+  margin-top: 30px; /* メッセージとの隙間 */
+}
+.nav-links {
+  list-style: none; /* 点を消す */
+  padding: 0;
+  display: flex;    /* 横並びにする */
+  justify-content: center; /* 中央に寄せる */
+  gap: 10px;        /* 項目同士の隙間 */
+  align-items: center;
+}
+.bracket, .separator {
+  user-select: none; /* 記号をマウスで選択できないようにする */
+}
+
+/* メインメニューの見出し */
+.main-nav-title {
+  text-align: center;
+  font-size: 24px;       /* 少し大きめの文字 */
+  margin-top: 50px;      /* 上のリンク集との間隔 */
+  margin-bottom: 20px;
+}
+
+/* 3つのブロックを横並びにする親要素 */
+.main-nav {
+  display: flex;         /* 横に並べる */
+  justify-content: center; /* 3つのブロック全体を中央に寄せる */
+  gap: 60px;             /* ブロック同士の間の広さ */
+  padding: 20px;
+}
+
+/* 各ブロックの幅を設定 */
+.menu-block {
+  width: 250px;           /* 幅を固定 */
+  flex-shrink: 0;         /* 画面が狭くなっても、この箱自体は縮まないようにする */
+  /* background-color: rgba(0,0,0,0.02); 調整用に薄く色をつけてみると幅がわかりやすいです */
+}
+
+/* 説明文のデザイン */
+.menu-desc {
+  display: block;
+  font-size: 15px;
+  color: #7b7b7b;
+  line-height: 1.4;
+  text-align: center;     /* 説明文が長くなっても中央で折り返す */
+  width: 100%;            /* ブロック内いっぱいに広がる */
+  word-break: break-all;  /* 長い英単語などがきても枠を突き抜けないようにする */
+}
+
+}
