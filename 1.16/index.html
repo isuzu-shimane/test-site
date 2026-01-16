@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head> <!-- サイトのタイトル -->
+  <meta charset="UTF-8">
+  <title>すたー★こねくと</title>
+  <meta name="description" content="嶋根いすずのホームページ「すたー★こねくと」">
+  
+  <!-- OGP設定 -->
+  <meta property="og:title" content="すたー★こねくと">
+  <meta property="og:description" content="嶋根いすずのホームページ「すたー★こねくと」">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://isuzu-shimane.github.io/isuzusatell1te/">
+  <meta property="og:image" content="https://isuzu-shimane.github.io/isuzusatell1te/images/net_sora.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+<style>
+.site-title {
+  color: #0000ff;
+}
+</style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="toppage.css">
+</head>
+
+<body>
+  <div class="top-banner"> <!-- 装飾用トップバナーと更新日時 -->
+    <span class="last-updated">最終通信日：2026.01.15</span>
+  </div>
+
+
+<div class="container"> <!-- ここから横並びにさせたいブロック（もしサイドメニューを作る場合） -->
+
+  <nav class="side-menu"> <!-- 左側ブロック（もしサイドメニューを作る場合） -->
+  </nav> <!-- ここまで左側ブロック -->
+
+<div class="main-content"> <!-- 中央ブロック -->
+  <header class="site-header"> <!-- タイトル -->
+   <h1 class="site-title">すたー★こねくと</h1>
+   <p class="site-subtitle">～Welcome to my digital garden～</p>
+  </header>
+
+<main> <!-- メインコンテンツここから -->
+   <p class="top-message">ようこそ！<br>
+    ここは すたー★こねくと。<br>
+    ネットの空に瞬くちいさな衛星です。</p>
+
+  <p class="top-message">この衛星は
+  <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=shimacochan01&type=16&width=5">
+  回の信号を受け取りました。<br>
+  ありがとう★
+  </p>
+
+  <p class="top-message">通信状態：<span id="status-text"></span>
+  </p>
+   <script> <!-- ランダムメッセージ -->
+  const now = new Date();
+  const hour = now.getHours();
+
+  let messages = [];
+
+  if (hour >= 4 && hour < 7) {
+    // 早朝
+    messages = [
+      "今日の観測を始めます",
+      "静かな軌道を周回中です",
+      "通信状態を確認中…"
+    ];
+  } else if (hour >= 7 && hour < 12) {
+    // 朝
+    messages = [
+      "通信待機中…",
+      "通信待機中…"
+    ];
+  } else if (hour >= 12 && hour < 15) {
+    // 昼間
+    messages = [
+      "平常です",
+      "安定しています",
+      "そろそろおやつの時間です"
+    ];
+  } else if (hour >= 15 && hour < 18) {
+    // 夕方
+    messages = [
+      "通信は維持されています",
+      "衛星は軌道を調節中です",
+      "観測は続いています"
+    ];
+  } else if (hour >= 18 && hour < 24) {
+    // 夜
+    messages = [
+      "良好です★",
+      "ぴぴるぴ～♪"
+    ];
+  } else {
+    // 深夜（0時〜4時）
+    messages = [
+      "回線は静かです",
+      "低出力で発信中…",
+      "衛星はまだ起きています"
+    ];
+  }
+
+  const message = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("status-text").textContent = message;
+   </script>
+  
+
+   <nav class="top-nav"> <!-- トップナビ -->
+  <ul class="nav-links">
+    <li class="bracket">[</li>
+    <li><a href="">ごあんない</a></li>
+    <li class="separator">|</li>
+    <li><a href="">プロフィール</a></li>
+    <li class="separator">|</li>
+    <li><a href="">衛星からのお手紙</a></li>
+    <li class="bracket">]</li>
+  </ul>
+   </nav>
+
+
+
+<section class="menu-container-box"> <!-- メインメニューの全体の箱 -->
+  <h2 class="main-nav-title">メインメニュー</h2>
+
+  <nav class="main-nav-flex"> <!-- メインメニューのリンク集 -->
+    <div class="menu-block">
+    <ul>
+      <li><a href="goannnai.html">ごあんない</a></li>
+       <span class="menu-desc">安全な航行のために、まずはじめにご一読ください★</span>
+      <li><a href="koujityu.html">プロフィール</a></li>
+       <span class="menu-desc">嶋根いすずについての百科事典が閲覧できます。</span>
+      <li><a href="koujityu.html">衛星からのお手紙</a></li>
+       <span class="menu-desc">衛星が観測した記録をみなさんにお届けいたします！</span>
+      <li><a href="koujityu.html">月刊嶋根</a></li>
+       <span class="menu-desc">手書き新聞「月刊嶋根」のアーカイブが閲覧できます。</span>
+      <li><a href="koujityu.html">ギャラリー</a></li>
+       <span class="menu-desc">公式イラストとファンアートを展示しています。（随時募集中！）</span>
+    </ul>
+    </div>
+
+    <div class="menu-block">
+    <ul>
+      <li><a href="https://x.com/isuzu_shimane" target="_blank">Twitter（X）</a></li>
+       <span class="menu-desc">嶋根いすずの公式ツイッターです。最新情報を取得したい方はこちら！</span>
+      <li><a href="https://www.youtube.com/@isuzu_shimane" target="_blank">YouTube</a></li>
+       <span class="menu-desc">嶋根いすずの公式YouTubeです。最大出力で発信中★ 要チェック！</span>
+      <li><a href="https://twitcasting.tv/isuzu_shimane" target="_blank">ツイキャス</a></li>
+       <span class="menu-desc">衛星放送室です。嶋根いすずが、お喋りやゲームと共に生中継します。</span>
+       <li><a href="https://ameblo.jp/isuzu-shimane/" target="_blank">Amebaブログ</a></li>
+       <span class="menu-desc">かわいい・楽しいブログコンテンツを更新中です。</span>
+      <li><a href="https://note.com/isuzu_shimane" target="_blank">note</a></li>
+       <span class="menu-desc">嶋根いすずの日記置き場です。日記は不定期に更新されます。</span>
+    </ul>
+    </div>
+
+    <div class="menu-block">
+    <ul>
+      <li><a href="https://twitcasting.tv/isuzu_shimane/star" target="_blank">ふぁん★くらぶ</a></li>
+       <span class="menu-desc">嶋根いすずの公式ファンクラブです。日記や限定動画が楽しめます。</span>
+      <li><a href="https://store.line.me/stickershop/product/28704411/ja" target="_blank">LINEスタンプ</a></li>
+       <span class="menu-desc">嶋根いすずが製作した公式LINEスタンプも絶賛販売中です。</span>
+      <li><a href="https://marshmallow-qa.com/5buxdm781ffqkz6?t=5r34GS&utm_medium=url_text&utm_source=promotion" target="_blank">マシュマロ</a></li>
+       <span class="menu-desc">嶋根いすず宛てに匿名でメッセージを発信できます。みなさんからのメッセージをお待ちしています★</span>
+    </ul>
+    </div>
+  </nav> <!-- メインメニューのリンク集ここまで -->
+</section> <!-- メインメニューの全体の箱ここまで -->
+
+<section class="news-container-box"> <!-- お知らせの全体の箱 -->
+  <h2 class="news-title">お知らせ</h2>
+  <div class="news-content">
+    <ul>
+      <li>現在お知らせはありません。</li>
+    </ul>
+  </div>
+</section> <!-- お知らせの全体の箱ここまで -->
+
+<section class="log-container-box"> <!-- 通信記録の全体の箱 -->
+  <h2 class="log-title">通信記録</h2>
+  <div class="log-content">
+    <ul>
+      <li>2026.01.15 衛星を打ち上げました！</li>
+      <li>2026.01.14 サイト名を「すたー★りんく」から「すたー★こねくと」へ変更しました。</li>
+      <li>2026.01.13 サイトを作り始めました。</li>
+    </ul>
+  </div>
+</section> <!-- 通信記録の全体の箱ここまで -->
+</main> <!-- メインコンテンツここまで -->
+
+</div> <!-- ここまで中央ブロック -->
+</div> <!-- ここまで横並びにさせたいブロック -->
+
+
+<footer class="site-footer">
+  <p>© 2026 すたー★こねくと</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/* トップメッセージ全体のレイアウト */
+  .site-header {
+    text-align: center;    /* 中央寄せ */
+  }
+  .site-title {
+    font-size: 38px;      /* 文字の大きさ */
+    margin-bottom: -2px; /* 下の要素を上に引き寄せる */
+  }
+  .site-subtitle {
+    font-size: 17px;
+    color: #7b7b7b;      
+    margin-top: 0;         /* 上の余白をなくす */
+    padding-left: 100px;    /* 左側に余白を作って、全体を右にずらす */
+    margin-bottom: 30px;
+  }
+  .top-message {
+    text-align: center;    /* 中央寄せ */
+  }
+
+/* トップナビの配置 */
+.top-nav {
+  text-align: center;
+  margin-top: 30px; /* メッセージとの隙間 */
+  margin-bottom: 50px;
+}
+.nav-links {
+  list-style: none; /* 点を消す */
+  padding: 0;
+  display: flex;    /* 横並びにする */
+  justify-content: center; /* 中央に寄せる */
+  gap: 10px;        /* 項目同士の隙間 */
+  align-items: center;
+}
+.bracket, .separator {
+  user-select: none; /* 記号をマウスで選択できないようにする */
+}
+
+/* メインメニューとお知らせと更新履歴の箱 */
+.menu-container-box, 
+.news-container-box,
+.log-container-box {
+  width: 850px;       /* 3つのブロック＋隙間の合計幅 */
+  margin: 5px auto;  /* 枠を画面中央に */
+  padding: 20px;      /* 枠の内側に少し余白を設ける */
+  border: 1px solid #ffffff;  /* 枠に色をつけてわかりやすく */
+}
+/* リンク集を横並びにする */
+.main-nav-flex {
+  display: flex;         /* 横に並べる */
+  justify-content: center; /* 3つのブロック全体を中央に寄せる */
+  gap: 40px;             /* ブロック同士の間の広さ */
+}
+/* 各ブロックの幅を設定 */
+.menu-block {
+  width: 280px;           /* 幅を固定 */
+  flex-shrink: 0;         /* 画面が狭くなっても、この箱自体は縮まないようにする */
+}
+/* 説明文のデザイン */
+.menu-desc {
+  display: block;
+  font-size: 15px;
+  color: #7b7b7b;
+  line-height: 1.4;
+  text-align: left;     /* 説明文が長くなっても中央で折り返す */
+  width: 100%;            /* ブロック内いっぱいに広がる */
+  word-break: break-all;  /* 長い英単語などがきても枠を突き抜けないようにする */
+}
+.main-nav-title {
+  margin-bottom: 0;
+  margin-left: -10px;
+}
+
+
+.news-title {
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+.news-content ul {
+  padding: 0;
+  margin: 0;
+  display: flex;           /* 横並び（上のブロックと統一するため） */
+  flex-direction: column;  /* 縦に並べる（横並び廃止） */
+  align-items: center;     /* 中央に寄せる */
+}
+.news-content li {
+  width: 835px; 
+  text-align: left;
+}
+
+
+.log-title {
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+.log-content ul {
+  padding: 0;
+  margin: 0;
+  display: flex;           /* 横並び（上のブロックと統一するため） */
+  flex-direction: column;  /* 縦に並べる（横並び廃止） */
+  align-items: center;     /* 中央に寄せる */
+}
+.log-content li {
+  width: 835px; 
+  text-align: left;
+}
