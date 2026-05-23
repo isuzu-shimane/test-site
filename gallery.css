@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* 中央のメインエリア全体の設定 */
+.main-content {
+  max-width: 900px;      /* 箱の最大幅（これ以上広がらない） */
+  margin: 0 auto;        /* 左右の余白を自動にして中央に寄せる */
+  background-color: #ffffff;  /* 箱の中身を白く */
+  border: 2px solid #ffffff;  /* 外枠 */
+  padding: 40px;              /* 箱の内側に余白を作る */
+  text-align: left;           /* 中身の文字は左寄せ */
+}
+
+.content-inner p {
+  line-height: 1.7;  /* 行間の調節 */
+}
+
+.chapter {
+  display: block;       /* 余白が効きやすく */
+  margin-top: 45px;     /* 上の文章との距離 */
+}
+
+
+
+
+/* ファンギャラリー全体を囲む箱 */
+.gallery-grid-fan {
+  width: 100%;
+  max-width: 1000px; /* サイトの幅に合わせて調整 */
+  margin: 0 auto;
+  column-count: 3;   /* 横に並べる列の数 */
+  column-gap: 0px;  /* 画像同士の横の隙間（0にすれば完全密着） */
+}
+
+/* 各画像の設定 */
+.gallery-item-fan {
+  display: block;
+  margin-bottom: 0px; /* 画像同士の縦の隙間（0にすれば完全密着） */
+  break-inside: avoid; /* 画像が途中で途切れないようにする */
+  overflow: hidden;
+}
+
+.gallery-item-official img {
+  width: 100%;       /* 横幅を列にピッタリ合わせる */
+  height: auto;      /* 高さは画像の比率を保つ */
+  display: block;
+}
+
+
+
+
+/* オフィシャルギャラリー全体を囲む箱 */
+.gallery-grid-official {
+  width: 100%;
+  max-width: 1000px; /* サイトの幅に合わせて調整 */
+  margin: 0 auto;
+  column-count: 4;   /* 横に並べる列の数です */
+  column-gap: 0px;  /* 画像同士の横の隙間（0にすれば完全密着） */
+}
+
+/* 各画像の設定 */
+.gallery-item-official {
+  display: block;
+  margin-bottom: 0px; /* 画像同士の縦の隙間（0にすれば完全密着） */
+  break-inside: avoid; /* 画像が途中で途切れないようにする */
+  overflow: hidden;
+}
+
+.gallery-item-official img {
+  width: 100%;       /* 横幅を列にピッタリ合わせる */
+  height: auto;      /* 高さは画像の比率を保つ */
+  display: block;
+}
+
+
+
+
+
+/* 青枠ボタン */
+.back-button {
+  display: inline-block;
+  padding: 5px 10px;       /* 余白 */
+  text-decoration: none;    /* 下線を消す */
+  border: 1px solid #0000ff; /* 細い青線 */
+  font-size: 14px;
+  margin-top: 30px;
+}
